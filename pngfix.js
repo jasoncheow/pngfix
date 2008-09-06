@@ -3,7 +3,7 @@ Fixes the display of both foreground and background transparent PNGs. Works
 on elements that are loaded dynamically, as well as elements that use class 
 names to toggle between different PNG backgrounds. For MSIE 5.5-6.
 
-To use, the following configurations are needed:
+To use, the following variables need to be configured:
 
   Location of 1px transparent gif (transparentGIF).
 
@@ -12,6 +12,13 @@ To use, the following configurations are needed:
 
   CSS selectors targeting elements using PNG in the background 
   (backgroundPNGSelectors).
+
+After configuration, include this file in the <head> portion of a page and 
+limit the fix to IE 6 and below using conditional comments:
+
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/javascripts/pngfix.js">
+  <![endif]-->
 
 Note that background-position and background-repeat properties cannot be 
 used, as the AlphaImageLoader filter does not support positioning and 
@@ -24,7 +31,7 @@ than "no-repeat".
 Adapted from: 
 http://komodomedia.com/blog/index.php/2007/11/05/css-png-image-fix-for-ie
 
-Last revised: 27 July 2008
+Last revised: 6 September 2008
 
 Copyright (c) 2008 Jason Cheow, under the MIT license
 ---------------------------------------------------------------------------*/
