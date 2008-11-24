@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------------
-Fixes the display of both foreground and background transparent PNGs. Works 
-on elements that are loaded dynamically, as well as elements that use class 
-names to toggle between different PNG backgrounds. For MSIE 5.5-6.
+Allows the use of alpha transparent PNGs (both foreground and background) on 
+MSIE 5.5-6. Works on elements that are loaded dynamically, as well as 
+elements that use class names to toggle between different PNG backgrounds.
 
 To use, the following variables need to be configured:
 
@@ -30,8 +30,6 @@ than "no-repeat".
 
 Adapted from: 
 http://komodomedia.com/blog/index.php/2007/11/05/css-png-image-fix-for-ie
-
-Last revised: 6 September 2008
 
 Copyright (c) 2008 Jason Cheow, under the MIT license
 ---------------------------------------------------------------------------*/
