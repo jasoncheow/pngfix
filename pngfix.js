@@ -105,6 +105,7 @@ var PNGFix = {
   },
   
   _fixBackground: function(element) {
+    element.runtimeStyle.zoom = '1';
     element.runtimeStyle.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + element.cachedSrc + '", sizingMethod="' + element.cachedSizingMethod + '")';
     if (element.nodeName.match(/^a$/i)) { element.runtimeStyle.cursor = 'pointer'; }
   }
