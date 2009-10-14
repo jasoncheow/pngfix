@@ -32,7 +32,7 @@ To use, the following three variables need to be configured:
 
         backgroundPNGSelectors: ['#header, .comment, #nav li'],
 
-## Including Script
+## Including the Script in HTML
 
 After configuration, include this file in the <head> portion of a page and limit the fix to IE 6 and below using conditional comments:
 
