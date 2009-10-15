@@ -45,7 +45,13 @@ Note that background-position and background-repeat properties cannot be used, a
 
 However, this fix tries to mimic background-repeat by setting "sizingMethod" for the filter to "scale" if background-repeat is set to anything other than "no-repeat".
 
+## Credits
+
 Adapted from: <http://komodomedia.com/blog/index.php/2007/11/05/css-png-image-fix-for-ie>
+
+Contributors:
+
+1. [Beau Smith](http://beausmith.com/): Great work on enhancing the documentation.
 
 Copyright (c) 2008 Jason Cheow, under the MIT license
 ---------------------------------------------------------------------------*/
