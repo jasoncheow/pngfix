@@ -18,7 +18,7 @@ To use, the following three variables need to be configured:
 
 2. `foregroundPNGSelectors` - comma separated CSS selectors (as you would specify in a css file) targeting elements using PNG in the foreground.
 
-        foregroundPNGSelectors: ['img'],
+        foregroundPNGSelectors: 'img',
 
 3. `backgroundPNGSelectors` - comma separated CSS selectors (as you would specify in a css file) targeting elements using PNG in the background.
 
@@ -30,7 +30,7 @@ To use, the following three variables need to be configured:
     
     Entry the selectors in a comma-separated list like this:
 
-        backgroundPNGSelectors: ['#header, .comment, #nav li'],
+        backgroundPNGSelectors: '#header, .comment, #nav li',
 
 ## Including the Script in HTML
 

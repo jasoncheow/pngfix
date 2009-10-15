@@ -19,7 +19,7 @@ To use, the following three variables need to be configured:
 
 2. `foregroundPNGSelectors` - comma separated CSS selectors (as you would specify in a css file) targeting elements using PNG in the foreground.
 
-        foregroundPNGSelectors: ['img'],
+        foregroundPNGSelectors: 'img',
 
 3. `backgroundPNGSelectors` - comma separated CSS selectors (as you would specify in a css file) targeting elements using PNG in the background.
 
@@ -31,7 +31,7 @@ To use, the following three variables need to be configured:
     
     Entry the selectors in a comma-separated list like this:
 
-        backgroundPNGSelectors: ['#header, .comment, #nav li'],
+        backgroundPNGSelectors: '#header, .comment, #nav li',
 
 ## Including the Script in HTML
 
@@ -60,9 +60,9 @@ var PNGFix = {
 
   transparentGIF: '/images/spacer.gif',
 
-  foregroundPNGSelectors: ['img'],
+  foregroundPNGSelectors: 'img',
 
-  backgroundPNGSelectors: [''],
+  backgroundPNGSelectors: '',
 
   isPNGForeground: function(element) {
     return (element.src && element.src.match(/\.png/i))
@@ -139,21 +139,8 @@ var PNGFix = {
     if (!/MSIE (5\.5|6)/.test(navigator.userAgent)) { return; }
 
     document.writeln('<style type="text/css">');
-
-    var elements = PNGFix.foregroundPNGSelectors;
-    for (i = 0; i < elements.length; i++) {
-      document.write(elements[i]);
-      if (elements[i] != elements[elements.length - 1]) { document.writeln(','); }
-    }
-    if (elements.length > 0) { document.writeln('{ behavior: expression((this.runtimeStyle.behavior = "none") && (PNGFix.fixForeground(this))); }'); }
-
-    var elements = PNGFix.backgroundPNGSelectors;
-    for (i = 0; i < elements.length; i++) {
-      document.write(elements[i]);
-      if (elements[i] != elements[elements.length - 1]) { document.writeln(','); }
-    }
-    if (elements.length > 0) { document.writeln('{ behavior: expression((this.runtimeStyle.behavior = "none") && (PNGFix.fixBackground(this))); }'); }
-
+    if (PNGFix.foregroundPNGSelectors.length > 0) { document.writeln(PNGFix.foregroundPNGSelectors + ' { behavior: expression((this.runtimeStyle.behavior = "none") && (PNGFix.fixForeground(this))); }'); }
+    if (PNGFix.backgroundPNGSelectors.length > 0) { document.writeln(PNGFix.backgroundPNGSelectors + ' { behavior: expression((this.runtimeStyle.behavior = "none") && (PNGFix.fixBackground(this))); }'); }
     document.writeln('</style>');
   }
 })();
