@@ -52,4 +52,4 @@ Contributors:
 
 1. [Beau Smith](http://beausmith.com/): Great work on enhancing the documentation.
 
-Copyright (c) 2008 Jason Cheow, under the MIT license
+Copyright (c) 2008 Jason Cheow, released under the MIT license
